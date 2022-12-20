@@ -1,24 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto:400,700');
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+	font-weight: 400;
+}
 
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Bold.ttf) format("truetype");
+	font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-Regular.ttf) format("truetype");
+	font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-Bold.ttf) format("truetype");
+	font-weight: 700;
+}
+
+
+// Main styles
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	border: 0;
-	transition: all 100ms ease;
 	outline: 0;
+	transition: all 100ms ease;
 }
 
 html, body {
 	height: 100%;
-	width: 100%;
 }
 
 body {
 	background: linear-gradient(305.42deg, #BB6BD9 0%, rgba(86, 204, 242, 0.5) 100%);
 	// Gradient fallback for unsupported browsers
 	background-color: #BB6BD9;
-	// Horizontal and vertical centering
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
