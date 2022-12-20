@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Collapsable</title>
+</head>
+<body>
+
+    <div class="card">
+        <section class="card__header">
+            <h2 class="card__title">
+                <svg viewBox="0 0 64 64" class="card__image"><path d="M17,37H15V30H31V27h2v3H49v7H47V32H17Zm43,3V59H36V40ZM38,42V53H58V42ZM58,57V55H38v2ZM44,24H20V5H44ZM22,7V18H42V7ZM42,22V20H22v2ZM4,40H28V59H4ZM26,57V55H6v2ZM6,42V53H26V42Z" fill="#343a40"/></svg>
+                <button aria-expanded="false" class="card__button card__button--expand">
+                    Remote lab
+                    <svg class="card__icon card__icon--chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+            </h2>
+        </section>
+
+        <section class="card__content collapsed">
+            <ul class="card__list">
+                <li class="card__item">
+                    <span class="card__label"><svg viewBox="0 0 16 16" class="card__icon"><path d="M1,1V15H15V1ZM14,14H2V4H14ZM10,2.5A.5.5,0,1,1,9.5,2,.5.5,0,0,1,10,2.5Zm2,0a.5.5,0,1,1-.5-.5A.5.5,0,0,1,12,2.5Zm2,0a.5.5,0,1,1-.5-.5A.5.5,0,0,1,14,2.5Z" /></svg>Browser support</span>
+                    <span class="card__status" title="Passed"><svg viewBox="0 0 16 16" class="card__icon card__icon--check"><path d="M6.09,13.41,1.34,9.25l1.32-1.5,3.25,2.84,7.34-8.25,1.5,1.32Z" /></svg></span>
+                </li>
+                <li class="card__item">
+                    <span class="card__label"><svg viewBox="0 0 16 16" class="card__icon"><polygon points="14.04 12 14.04 7 9 7 9 4 10 4 10 1 7 1 7 4 8 4 8 7 2.96 7 2.96 12 2 12 2 15 5 15 5 12 3.96 12 3.96 8 8 8 8 10 7 10 7 13 10 13 10 10 9 10 9 8 13.04 8 13.04 12 12 12 12 15 15 15 15 12 14.04 12" /></svg>Connectivity</span>
+                    <span class="card__status" title="Passed"><svg viewBox="0 0 16 16" class="card__icon card__icon--check"><path d="M6.09,13.41,1.34,9.25l1.32-1.5,3.25,2.84,7.34-8.25,1.5,1.32Z" /></svg></span>
+                </li>
+                <li class="card__item">
+                    <span class="card__label"><svg viewBox="0 0 16 16" class="card__icon"><path d="M15,5,11,7.4V4H1v8H11V8.6L15,11Zm-5,6H2V5h8Zm4-1.77L11.94,8,14,6.77Z" /></svg>Camera</span>
+                    <span class="card__status" title="Passed"><svg viewBox="0 0 16 16" class="card__icon card__icon--check"><path d="M6.09,13.41,1.34,9.25l1.32-1.5,3.25,2.84,7.34-8.25,1.5,1.32Z" /></svg></span>
+                </li>
+                <li class="card__item">
+                    <span class="card__label"><svg viewBox="0 0 16 16" class="card__icon"><path d="M7.38,11H8.62A2.41,2.41,0,0,0,11,8.57V3.43A2.41,2.41,0,0,0,8.62,1H7.38A2.41,2.41,0,0,0,5,3.43V8.57A2.41,2.41,0,0,0,7.38,11ZM6,3.43A1.41,1.41,0,0,1,7.38,2H8.62A1.41,1.41,0,0,1,10,3.43V8.57A1.41,1.41,0,0,1,8.62,10H7.38A1.41,1.41,0,0,1,6,8.57ZM13,8v.3c0,2.59-1.84,4.7-4.1,4.7H9v1h2v1H5V14H7V13h.1C4.84,13,3,10.89,3,8.3V8H4v.3c0,2,1.39,3.7,3.1,3.7H8.9c1.71,0,3.1-1.66,3.1-3.7V8Z" /></svg>Microphone</span>
+                    <span class="card__status" title="Passed"><svg viewBox="0 0 16 16" class="card__icon card__icon--check"><path d="M6.09,13.41,1.34,9.25l1.32-1.5,3.25,2.84,7.34-8.25,1.5,1.32Z" /></svg></span>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

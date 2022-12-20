@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.25rem;
+	background: rgb(188,201,56);
+	background: linear-gradient(326deg, rgba(188,201,56,1) 0%, rgba(0,147,177,1) 100%); 
+}
+
+.calculator {
+	padding: 1rem;
+	background-color: #495057;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.5), 0 15px 25px hsla(0, 0%, 0%, 0.15);
+}
+
+.display {
+	height: 100px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.1), inset 0 -2px 0 hsla(0, 0%, 100%, .15);
+	background-color: #343a40;
+	color: white;
+	text-align: right;
+}
+
+.result {
+	display: block;
+	font-size: 1.5rem;
+}
+
+button {
+	height: 60px;
+	width: 60px;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.25rem;
+	border: 1px solid #828282;
+	background: linear-gradient(-180deg, #C8C8C8 0%, #B1B1B1 100%); 
+
+	&:hover, &:focus {
+		background: linear-gradient(-180deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 70%) 100%); 
+	}
+
+	&:active {
+		background: linear-gradient(-180deg, hsl(0, 0%, 70%) 0%, hsl(0, 0%, 50%) 100%); 
+	}
+}
+
+button[data-operator="clear"], button[data-operator="add"], button[data-operator="substract"], button[data-operator="divide"], button[data-operator="multiply"], button[data-operator="equal"] {
+	background: linear-gradient(-180deg, #E2C792 0%, #BA9B5E 100%);
+
+	&:hover, &:focus {
+		background: linear-gradient(-180deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 70%) 100%); 
+	}
+
+	&:active {
+		background: linear-gradient(-180deg, hsl(0, 0%, 70%) 0%, hsl(0, 0%, 50%) 100%); 
+	}
+}
+
+section {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-areas:
+	". . . clear"
+	"seven eight nine divide"
+	"four five six multiply"
+	"one two three add"
+	"zero dot equal substract"
+}
+
+[data-number="zero"] {
+	grid-area: zero;
+}
+
+[data-number="one"] {
+	grid-area: one;
+}
+
+[data-number="two"] {
+	grid-area: two;
+}
+
+[data-number="three"] {
+	grid-area: three;
+}
+
+[data-number="four"] {
+	grid-area: four;
+}
+
+[data-number="five"] {
+	grid-area: five;
+}
+
+[data-number="six"] {
+	grid-area: six;
+}
+
+[data-number="seven"] {
+	grid-area: seven;
+}
+
+[data-number="eight"] {
+	grid-area: eight;
+}
+
+[data-number="nine"] {
+	grid-area: nine;
+}
+
+[data-number="dot"] {
+	grid-area: dot;
+}
+
+[data-operator="clear"] {
+	grid-area: clear;
+}
+
+[data-operator="add"] {
+	grid-area: add;
+}
+
+[data-operator="substract"] {
+	grid-area: substract;
+}
+
+[data-operator="divide"] {
+	grid-area: divide;
+}
+
+[data-operator="multiply"] {
+	grid-area: multiply;
+}
+
+[data-operator="equal"] {
+	grid-area: equal;
+}
