@@ -23,6 +23,7 @@
 }
 
 
+
 // Main styles
 * {
 	box-sizing: border-box;
@@ -66,26 +67,72 @@ button {
 	}
 }
 
+
+
 .user-access {
+	display: grid;
+	grid-template-columns: min-content;
+	grid-template-rows: repeat(2, min-content);
 	overflow: hidden;
 	background-color: hsl(0, 0%, 100%);
 	border-radius: 3px;
 	animation: appear 1s ease-in 0s;
-	display: grid;
-	grid-template-columns: min-content;
-	grid-template-rows: repeat(2, min-content);
-
-	&__nav {
-		grid-area: 1 / 1 / 2 / 1;
-		display: flex;
-		flex-direction: row;
-	}
 
 	&__sign-up-view, &__log-in-view {
 		padding: 20px;
 		grid-area: 2 / 1 / 2 / 1;
 	}
 
+}
+
+
+.tabs {
+	grid-area: 1 / 1 / 2 / 1;
+
+	&__list {
+		list-style-type: none;
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__item {
+		flex-grow: 1;
+	}
+}
+
+
+.tab {
+	width: 100%;
+	padding: 1rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+	border-radius: initial;
+	text-transform: uppercase;
+
+	&:hover, &:focus {
+		background-color: #3251FF;
+		color: #FFFFFF;
+		box-shadow: none;
+	}
+
+	&--active {
+		background-color: #FFFFFF;
+		color: #323232;
+		box-shadow: none;
+	}
+
+	&--inactive {
+		background-color: #C0C0C0;
+		color: #4D4D4D;
+	}
+
+	&--lftshadow {
+		box-shadow: inset 1px 0 1px gray;
+	}
+
+	&--rgtshadow {
+		box-shadow: inset -1px 0 -1px gray;
+	}
 }
 
 
@@ -98,30 +145,6 @@ button {
 	text-transform: uppercase;
 }
 
-.nav__signUp:hover, .nav__signUp:focus, .nav__logIn:hover, .nav__logIn:focus {
-	background-color: #3251FF;
-	color: #FFFFFF;
-	box-shadow: none;
-}
-
-.nav__logIn--inactive-shadow {
-	box-shadow: inset 1px 0 3px gray;
-}
-
-.nav__signUp--inactive-shadow {
-	box-shadow: inset -1px 0 3px gray;
-}
-
-.nav--active {
-	background-color: #FFFFFF;
-	color: #323232;
-	box-shadow: none;
-}
-
-.nav--inactive {
-	background-color: #C0C0C0;
-	color: #4D4D4D;
-}
 
 .title {
 	font-family: 'Raleway', sans-serif;

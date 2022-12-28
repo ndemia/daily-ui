@@ -10,14 +10,17 @@
 
 <body>
 
-	<!-- Container -->
 	<section id="user-access" class="user-access">
 
-		<!-- Navigation -->
-		<nav class="user-access__nav">
-			<button id="nav__signUp" class="nav__signUp nav--active" type="button">Sign up</button>
-			<button id="nav__logIn" class="nav__logIn nav--inactive nav__logIn--inactive-shadow" type="button">Log in</button>
-		</nav>
+		<div class="tabs">
+			<ul class="tabs__list">
+				<li class="tabs__item">
+					<button id="signUp" class="tab tab--active tab--rgtshadow">Sign up</button>
+				</li>
+				<li class="tabs__item">
+					<button id="logIn" class="tab tab--inactive tab--lftshadow">Log in</button>
+			</ul>
+		</div>
 
 		<!-- Sign up view -->
 		<section id="user-access__sign-up-view" class="user-access__sign-up-view user-access--active">
