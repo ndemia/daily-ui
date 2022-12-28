@@ -31,7 +31,6 @@
 	padding: 0;
 	border: 0;
 	outline: 0;
-	transition: all 100ms ease;
 }
 
 html, body {
@@ -58,7 +57,6 @@ button, input {
 button {
 	padding: 10px 15px;
 	border-radius: 3px;
-	cursor: pointer;
 	
 	svg {
 		width: 20px;
@@ -108,57 +106,45 @@ button {
 	font-weight: 700;
 	border-radius: initial;
 	text-transform: uppercase;
-
-	&:hover, &:focus {
-		background-color: #3251FF;
-		color: #FFFFFF;
-		box-shadow: none;
-	}
+	transition: all 120ms ease-in-out;
 
 	&--active {
 		background-color: #FFFFFF;
 		color: #323232;
 		box-shadow: none;
+		cursor: default;
 	}
 
 	&--inactive {
 		background-color: #C0C0C0;
 		color: #4D4D4D;
+		cursor: pointer;
+
+		&:hover, &:focus {
+			background-color: #3251FF;
+			color: #FFFFFF;
+			box-shadow: none;
+		}
 	}
 
 	&--lftshadow {
-		box-shadow: inset 1px 0 1px gray;
+		box-shadow: inset 1px 0 3px gray;
 	}
 
 	&--rgtshadow {
-		box-shadow: inset -1px 0 -1px gray;
+		box-shadow: inset -1px 0 3px gray;
 	}
-}
-
-
-.nav__signUp, .nav__logIn {
-	flex-grow: 1;
-	padding: 1rem;
-	font-size: 1.2rem;
-	font-weight: 700;
-	border-radius: initial;
-	text-transform: uppercase;
 }
 
 
 .title {
 	font-family: 'Raleway', sans-serif;
-	font-size: 35px;
+	color: #323232;
+	font-size: 2rem;
 	font-weight: 400;
 	text-align: center;
-	margin-bottom: 20px;
-	color: #323232;
-	transition: all 300ms ease;
-}
-
-a:hover, a:focus, a:active {
-	background-color: #3251FF;
-	color: #FFFFFF;
+	margin-bottom: 1rem;
+	line-height: 1.1;
 }
 
 .user-access--active {
