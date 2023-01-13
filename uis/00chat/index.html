@@ -11,7 +11,7 @@
 
 	<div class="mask">
 		<div class="container">
-			<section class="list">
+			<section class="list" aria-hidden="true">
 				<header class="header list__header">
 					<span class="header__name">Conversations</span>
 				</header>
@@ -44,7 +44,7 @@
 			</section>
 			<section class="conversation">
 				<header class="header">
-					<button class="btn btn--list" title="Conversation list" tabindex="0">
+					<button class="btn btn--list" title="Show chat list" tabindex="0">
 						<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
 					</button>
 					<div class="header__info">
@@ -69,7 +69,7 @@
 					</div>
 				</div>
 				<footer class="footer">
-					<input type="text" class="footer__input" placeholder="Write a message..." tabindex="0">
+					<input type="text" class="footer__input" placeholder="Write a message..." tabindex="0" autocomplete="off">
 					<button class="btn btn--send" title="Send message" tabindex="0">
 						<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
 					</button>
