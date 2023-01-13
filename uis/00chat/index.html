@@ -16,41 +16,35 @@
 					<span class="header__name">Conversations</span>
 				</header>
 				<div class="chatlist">
-					<a id="chat1" class="chat">
-						<div class="chat__preview">
-							<span class="chat__user">Nadia</span>
-							<span class="chat__message">How is it going?</span>
-						</div>
-					</a>
-					<a id="chat2" class="chat">
-						<div class="chat__preview">
-							<span class="chat__user">Susan</span>
-							<span class="chat__message">
-								<span class="chat__sent">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-								</span>
-								The exam was very easy, don't you think?
+					<button id="chat1" class="chat" tabindex="-1">
+						<span class="chat__user">Nadia</span>
+						<span class="chat__message">How is it going?</span>
+					</button>
+					<button id="chat2" class="chat" tabindex="-1">
+						<span class="chat__user">Susan</span>
+						<span class="chat__message">
+							<span class="chat__sent">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
 							</span>
-						</div>
-					</a>
-					<a id="chat3" class="chat">
-						<div class="chat__preview">
-							<span class="chat__user">Mark</span>
-							<span class="chat__message">
-								<span class="chat__sent">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-								</span>
-								Hey, did you see what happened to the car?
+							The exam was very easy, don't you think?
+						</span>
+					</button>
+					<button id="chat3" class="chat" tabindex="-1">
+						<span class="chat__user">Mark</span>
+						<span class="chat__message">
+							<span class="chat__sent">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
 							</span>
-						</div>
-					</a>
+							Hey, did you see what happened to the car?
+						</span>
+					</button>
 				</div>
 			</section>
 			<section class="conversation">
 				<header class="header">
-					<button class="btn btn--list" title="Conversation list">
+					<button class="btn btn--list" title="Conversation list" tabindex="0">
 						<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
 					</button>
 					<div class="header__info">
@@ -58,10 +52,10 @@
 						<span class="header__name">Nadia</span>
 					</div>
 					<div class="header__actions">
-						<button class="btn btn--camera" title="Start videocall">
+						<button class="btn btn--camera" tabindex="0" title="Start videocall">
 							<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
 						</button>
-						<button class="btn btn--close" title="Close chat">
+						<button class="btn btn--close" tabindex="0" title="Close chat">
 							<svg  class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
 						</button>
 					</div>
@@ -75,8 +69,8 @@
 					</div>
 				</div>
 				<footer class="footer">
-					<input type="text" class="footer__input" placeholder="Write a message...">
-					<button class="btn btn--send" title="Send message">
+					<input type="text" class="footer__input" placeholder="Write a message..." tabindex="0">
+					<button class="btn btn--send" title="Send message" tabindex="0">
 						<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
 					</button>
 				</footer>

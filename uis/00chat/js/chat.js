@@ -20,7 +20,6 @@ function addMessageToConversation () {
 		// Return focus to input.
 		document.querySelector('.footer__input').focus();
 	}
-
 }
 
 
@@ -28,17 +27,55 @@ function addMessageToConversation () {
 // Show chat list.
 document.querySelector('.btn--list').addEventListener('click', function () {
 
-	document.querySelector('.container').classList.add('list--active');
-	
+	document.querySelector('.container').classList.toggle('list--active');
+
+	// Disable keyboard navigation for the conversation view.
+	document.querySelectorAll('.conversation [tabindex="0"]').forEach((element) => {
+
+		element.setAttribute('tabindex', '-1');
+
+	});
+
+	// Enable the keyboard navigation for the chat list.
+	document.querySelectorAll('.list [tabindex="-1"]').forEach((element) => {
+
+		element.setAttribute('tabindex', '0');
+
+	});
+
+	// Focus on first chat.
+	document.querySelector('#chat1').focus();
 });
 
 
 
 // Show conversation.
-document.querySelector('#chat1').addEventListener('click', function () {
+document.querySelectorAll('.chat').forEach((element) => {
 
-	document.querySelector('.container').classList.remove('list--active');
+	element.addEventListener('click', function () {
 
+		document.querySelector('.container').classList.toggle('list--active');
+
+		// Enable the keyboard navigation for the conversation view.
+		document.querySelectorAll('.conversation [tabindex="-1"]').forEach((element) => {
+
+			element.setAttribute('tabindex', '0');
+
+		});
+
+		// Disable keyboard navigation for the chat list.
+		document.querySelectorAll('.list [tabindex="0"]').forEach((element) => {
+
+			element.setAttribute('tabindex', '-1');
+
+		});
+
+		/* Focus to input with timeout because otherwise the focus happens so fast that it breaks the transition and the conversation view goes out of the container. */
+		setTimeout(() => {
+			document.querySelector('.footer__input').focus();
+		}, 400);
+
+	});
 });
 
 
@@ -54,7 +91,7 @@ document.querySelectorAll('.header__info, .list__header').forEach(function (e) {
 });
 
 
-// Events
+
 // Send message.
 document.querySelector('.btn--send').addEventListener('click', addMessageToConversation);
 
