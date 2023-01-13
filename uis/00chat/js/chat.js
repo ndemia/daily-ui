@@ -41,6 +41,10 @@ function showChatList () {
 
 	});
 
+	// Toggle aria-hidden in each section
+	document.querySelector('.list').setAttribute('aria-hidden', false)
+	document.querySelector('.conversation').setAttribute('aria-hidden', true)
+
 	// Focus on first chat.	
 	setTimeout(() => {
 		document.querySelector('#chat1').focus();
@@ -67,6 +71,10 @@ function showConversation () {
 		element.setAttribute('tabindex', '-1');
 
 	});
+
+	// Toggle aria-hidden in each section
+	document.querySelector('.list').setAttribute('aria-hidden', true)
+	document.querySelector('.conversation').setAttribute('aria-hidden', false)
 
 	/* Focus to input with timeout because otherwise the focus happens so fast that it breaks the transition and the conversation view goes out of the container. */
 	setTimeout(() => {
