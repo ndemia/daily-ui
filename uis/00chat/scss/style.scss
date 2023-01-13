@@ -92,6 +92,7 @@ body {
 		right: 0;
 		width: auto;
 		height: 100%;
+		border-radius: 0;
 	}
 }
 
@@ -136,6 +137,7 @@ body {
 
 	&--send {
 		border-radius: 3px;
+		//flex-grow: 1;
 	}
 }
 
@@ -286,6 +288,11 @@ body {
 		border: 1px solid $gray-3;
 		font-family: 'Poppins', sans-serif;
 		transition: all 100ms ease-in-out;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			margin-right: 1rem;
+		}
 		
 		&:focus {
 			border: 1px solid $primary;
@@ -356,12 +363,12 @@ body {
 	&__sent {
 		display: flex;
 		flex-direction: row;
-	}
-	
-	&__sent svg {
-		width: 1rem;
-		height: 1rem;
-		stroke: $green;
+
+		svg {
+			width: 1rem;
+			height: 1rem;
+			stroke: $green;
+		}
 	}
 	
 	&__sent svg:last-of-type {
