@@ -1,7 +1,6 @@
-// Add message to the conversation.
 function addMessageToConversation () {
 
-	// Define variable to store message text.
+	// Save written message from input.
 	let messageText = document.querySelector('.footer__input').value;
 
 	// If message is empty...
@@ -24,8 +23,7 @@ function addMessageToConversation () {
 
 
 
-// Show chat list.
-document.querySelector('.btn--list').addEventListener('click', function () {
+function showChatList () {
 
 	document.querySelector('.container').classList.toggle('list--active');
 
@@ -43,60 +41,59 @@ document.querySelector('.btn--list').addEventListener('click', function () {
 
 	});
 
-	// Focus on first chat.
-	document.querySelector('#chat1').focus();
-});
+	// Focus on first chat.	
+	setTimeout(() => {
+		document.querySelector('#chat1').focus();
+	}, 350);
+
+}
 
 
 
-// Show conversation.
-document.querySelectorAll('.chat').forEach((element) => {
+function showConversation () {
 
-	element.addEventListener('click', function () {
+	document.querySelector('.container').classList.toggle('list--active');
 
-		document.querySelector('.container').classList.toggle('list--active');
+	// Enable the keyboard navigation for the conversation view.
+	document.querySelectorAll('.conversation [tabindex="-1"]').forEach((element) => {
 
-		// Enable the keyboard navigation for the conversation view.
-		document.querySelectorAll('.conversation [tabindex="-1"]').forEach((element) => {
-
-			element.setAttribute('tabindex', '0');
-
-		});
-
-		// Disable keyboard navigation for the chat list.
-		document.querySelectorAll('.list [tabindex="0"]').forEach((element) => {
-
-			element.setAttribute('tabindex', '-1');
-
-		});
-
-		/* Focus to input with timeout because otherwise the focus happens so fast that it breaks the transition and the conversation view goes out of the container. */
-		setTimeout(() => {
-			document.querySelector('.footer__input').focus();
-		}, 400);
+		element.setAttribute('tabindex', '0');
 
 	});
-});
 
+	// Disable keyboard navigation for the chat list.
+	document.querySelectorAll('.list [tabindex="0"]').forEach((element) => {
 
-
-// Minimize chat.
-document.querySelectorAll('.header__info, .list__header').forEach(function (e) {
-	
-	e.addEventListener('click', function () {
-
-		document.querySelector('.mask').classList.toggle('minimize');
+		element.setAttribute('tabindex', '-1');
 
 	});
-});
+
+	/* Focus to input with timeout because otherwise the focus happens so fast that it breaks the transition and the conversation view goes out of the container. */
+	setTimeout(() => {
+		document.querySelector('.footer__input').focus();
+	}, 350);
+}
 
 
 
-// Send message.
+function minimizeChat () {
+
+	document.querySelector('.mask').classList.toggle('minimize');
+
+}
+
+
+
+// Event listeners.
+document.querySelector('.btn--list').addEventListener('click', showChatList);
+document.querySelectorAll('.chat')
+	.forEach((element) => element.addEventListener('click', showConversation));
+document.querySelectorAll('.header__info, .list__header')
+	.forEach((element) => element.addEventListener('click', minimizeChat));
 document.querySelector('.btn--send').addEventListener('click', addMessageToConversation);
 
 // Send message with enter key.
-document.querySelector('.footer__input').addEventListener('keydown', function (e) {
+document.querySelector('.footer__input').addEventListener('keydown', (e) => {
 
 	if (e.key == 'Enter') {
 
