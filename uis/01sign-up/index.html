@@ -13,76 +13,40 @@
     <section id="user-access" class="user-access">
       <!-- Tabs -->
       <div class="tabs">
-        <button
-          id="signUp"
-          class="tab tab--active"
-          tabindex="0"
-          aria-selected="true"
-        >
-          Sign up
-        </button>
-        <button
-          id="logIn"
-          class="tab tab--inactive tab--lftshadow"
-          tabindex="-1"
-          aria-selected="false"
-        >
-          Log in
-        </button>
+        <button id="signUp" class="tab tab--active" tabindex="0" aria-selected="true">Sign up</button>
+        <button id="logIn" class="tab tab--inactive tab--lftshadow" tabindex="-1" aria-selected="false">Log in</button>
       </div>
 
       <!-- Sign up view -->
-      <section
-        id="user-access__sign-up-view"
-        class="user-access__sign-up-view user-access--active"
-      >
+      <section id="user-access__sign-up-view" class="user-access__sign-up-view user-access--active">
         <form class="form">
           <h2 class="form__title">Create your new account</h2>
           <fieldset class="form__group form__group--half">
             <label for="first_name" class="form__label">
               <span>Username</span>
             </label>
-            <input
-              class="form__input"
-              type="text"
-              id="username"
-              name="username"
-              autocomplete="off"
-              required
-            />
+            <input class="form__input" type="text" id="username" name="username" autocomplete="off" required />
           </fieldset>
           <fieldset class="form__group">
             <label for="mail" class="form__label"><span>E-mail</span></label>
-            <input
-              class="form__input"
-              type="email"
-              id="email"
-              name="usermail"
-              autocomplete="off"
-              required
-            />
+            <input class="form__input" type="email" id="email" name="usermail" autocomplete="off" required />
           </fieldset>
           <fieldset class="form__group">
-            <label for="password" class="form__label"
-              ><span>Password</span></label
-            >
-            <input
-              class="form__input"
-              type="password"
-              id="password"
-              name="userpassword"
-              autocomplete="off"
-              required
-            />
+            <label for="password" class="form__label">
+              <span>Password</span>
+            </label>
+            <input class="form__input" type="password" id="password" name="userpassword" autocomplete="off" required />
           </fieldset>
-          <button class="btn btn--primary" type="submit">Sign up</button>
           <div class="text">
             <p class="text__body">
               By signing up, you agree to our
-              <a href="#" class="inline__link">Terms of Service</a> and
-              <a href="#" class="inline__link">Privacy Policy</a>.
+              <a href="#" class="inline__link">Terms of Service</a>
+              and
+              <a href="#" class="inline__link">Privacy Policy</a>
+              .
             </p>
           </div>
+          <button class="btn btn--primary" type="submit">Sign up</button>
         </form>
         <footer class="footer footer--social">
           <button class="btn btn--secondary btn--icon">
@@ -123,35 +87,18 @@
       </section>
 
       <!-- Log in view -->
-      <section
-        id="user-access__log-in-view"
-        class="user-access__log-in-view user-access--inactive"
-      >
+      <section id="user-access__log-in-view" class="user-access__log-in-view user-access--inactive">
         <form class="form">
           <h2 class="form__title">Welcome back</h2>
           <fieldset class="form__group">
             <label for="mail" class="form__label"><span>E-mail</span></label>
-            <input
-              class="form__input"
-              type="email"
-              id="mail"
-              name="user_mail"
-              autocomplete="off"
-              required
-            />
+            <input class="form__input" type="email" id="mail" name="user_mail" autocomplete="off" required />
           </fieldset>
           <fieldset class="form__group">
-            <label for="password" class="form__label"
-              ><span>Password</span></label
-            >
-            <input
-              class="form__input"
-              type="password"
-              id="password"
-              name="user_password"
-              autocomplete="off"
-              required
-            />
+            <label for="password" class="form__label">
+              <span>Password</span>
+            </label>
+            <input class="form__input" type="password" id="password" name="user_password" autocomplete="off" required />
           </fieldset>
           <button class="btn btn--primary" type="submit">Log in</button>
           <div class="text">
