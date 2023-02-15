@@ -12,13 +12,19 @@
     <!-- Container -->
     <section id="user-access" class="user-access">
       <!-- Tabs -->
-      <div class="tabs">
-        <button id="signUp" class="tab tab--active" tabindex="0" aria-selected="true">Sign up</button>
-        <button id="logIn" class="tab tab--inactive tab--lftshadow" tabindex="-1" aria-selected="false">Log in</button>
+      <div class="tabs" role="tablist">
+        <button id="signUp" class="tab tab--active" aria-selected="true" role="tab" tabindex="0">Sign up</button>
+        <button id="logIn" class="tab tab--inactive tab--lftshadow" aria-selected="false" role="tab" tabindex="-1">Log in</button>
       </div>
 
       <!-- Sign up view -->
-      <section id="user-access__sign-up-view" class="user-access__sign-up-view user-access--active">
+      <section
+        id="user-access__sign-up-view"
+        class="user-access__sign-up-view user-access--active"
+        role="tabpanel"
+        hidden="false"
+        aria-labelledby="signUp"
+      >
         <form class="form">
           <h2 class="form__title">Create your new account</h2>
           <fieldset class="form__group form__group--half">
@@ -37,6 +43,7 @@
             </label>
             <input class="form__input" type="password" id="password" name="userpassword" autocomplete="off" required />
           </fieldset>
+          <button class="btn btn--primary" type="submit">Sign up</button>
           <div class="text">
             <p class="text__body">
               By signing up, you agree to our
@@ -46,7 +53,6 @@
               .
             </p>
           </div>
-          <button class="btn btn--primary" type="submit">Sign up</button>
         </form>
         <footer class="footer footer--social">
           <button class="btn btn--secondary btn--icon">
@@ -87,7 +93,13 @@
       </section>
 
       <!-- Log in view -->
-      <section id="user-access__log-in-view" class="user-access__log-in-view user-access--inactive">
+      <section
+        id="user-access__log-in-view"
+        class="user-access__log-in-view user-access--inactive"
+        role="tabpanel"
+        hidden="true"
+        aria-labelledby="logIn"
+      >
         <form class="form">
           <h2 class="form__title">Welcome back</h2>
           <fieldset class="form__group">
